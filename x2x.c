@@ -1827,6 +1827,10 @@ XKeyEvent *pEv;
   KeyCode   toShiftCode;
 
   keysym = XKeycodeToKeysym(pDpyInfo->fromDpy, pEv->keycode, 0);
+  /* GB */
+  if (keysym == XK_Shift_R) /* For now, right shift key ends x2x */ 
+	exit ( 0 );
+  /* GB */
   bPress = (pEv->type == KeyPress);
 
   /* If CapsLock is on, we need to do some funny business to make sure the */
