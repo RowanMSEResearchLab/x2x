@@ -415,6 +415,8 @@ char **argv;
 
 #endif /* WIN_2_X */
 
+// TODO Make changes here.
+
   XrmInitialize();
   ParseCommandLine(argc, argv);
 
